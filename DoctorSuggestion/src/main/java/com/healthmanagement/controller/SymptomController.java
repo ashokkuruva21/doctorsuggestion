@@ -2,6 +2,7 @@ package com.healthmanagement.controller;
 
 import com.healthmanagement.entity.Symptom;
 import com.healthmanagement.service.SymptomService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import jakarta.websocket.server.PathParam;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +14,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/symptoms")
+@Tag(name = "Symptom API", description = "Operations related to Symptom")
 public class SymptomController {
 
     @Autowired
