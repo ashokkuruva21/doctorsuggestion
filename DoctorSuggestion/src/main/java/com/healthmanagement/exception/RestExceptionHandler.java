@@ -33,8 +33,8 @@ public class RestExceptionHandler {
     }
 
 
-    @ExceptionHandler(NoSuchsymptomException.class)
-    public ResponseEntity<ErrorMessage> noSuchsymptomException(NoSuchsymptomException exception){
+    @ExceptionHandler(NoSuchSymptomException.class)
+    public ResponseEntity<ErrorMessage> noSuchSymptomException(NoSuchSymptomException exception){
         ErrorMessage errorMessage=new ErrorMessage();
         errorMessage.setErrorCode(HttpStatus.NOT_FOUND.value());
         errorMessage.setErrorMsg(exception.getMessage());

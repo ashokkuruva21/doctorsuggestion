@@ -63,7 +63,7 @@ public class DoctorController {
                            @ApiResponse(responseCode = "404",description = "Doctor Id is Invalid",content = @Content(schema = @Schema(implementation = ErrorMessage.class)))})
     @DeleteMapping("/delete/{doctorId}")
     public ResponseEntity<String> deleteDoctor(@PathVariable Long doctorId){
-        String response = doctorService.DeleteDoctorById(doctorId);
+        String response = doctorService.deleteDoctorById(doctorId);
         return new ResponseEntity<>(response,HttpStatus.OK);
     }
 }

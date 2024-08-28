@@ -32,7 +32,7 @@ public class DoctorService {
         }
     }
 
-    public String DeleteDoctorById(Long doctorId){
+    public String deleteDoctorById(Long doctorId){
         Optional<Doctor> doctorById = doctorRepository.findById(doctorId);
         if(doctorById.isPresent()){
             doctorRepository.deleteById(doctorId);
